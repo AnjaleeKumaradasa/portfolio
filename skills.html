@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Skills | Anjalee Kumaradasa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6d4c41;
+      --secondary: #d7ccc8;
+      --accent: #8d6e63;
+      --text: #3e2723;
+      --light: #f9f5f3;
+      --white: #ffffff;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+    }
+
+    /* Navigation */
+    nav.main-nav {
+      background-color: var(--primary);
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    nav.main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav.main-nav li {
+      margin: 0;
+    }
+
+    nav.main-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    nav.main-nav a:hover,
+    nav.main-nav a.active {
+      background-color: var(--accent);
+    }
+
+    /* Hero Section */
+    .skills-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/mic2.jpg') center/cover no-repeat;
+      height: 35vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .skills-hero h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Skills Section */
+    .skills-section {
+      padding: 4rem 2rem;
+    }
+
+    .skills-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      position: relative;
+    }
+
+    .skills-section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent);
+      margin: 10px auto 0;
+      border-radius: 5px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .skill-card {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .skill-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+    }
+
+    .skill-card p {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    @media (max-width: 600px) {
+      .skills-hero h1 {
+        font-size: 2rem;
+      }
+
+      .skills-section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html" class="active">My Skills</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="skills-hero">
+    <h1>My Expertise</h1>
+  </section>
+
+  <section class="skills-section">
+    <div class="container">
+      <h2>Professional Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🎤</div>
+          <h3>Public Speaking</h3>
+          <p>Engaging audiences with compelling narratives and dynamic delivery for conferences and seminars.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📢</div>
+          <h3>Announcing</h3>
+          <p>Event announcing with clarity, confidence, and crowd-connecting charisma.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">✍️</div>
+          <h3>Content Writing</h3>
+          <p>Creating impactful copy, speeches, and scripts tailored for voice and print.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎭</div>
+          <h3>Voice Modulation</h3>
+          <p>Mastery of tone and emotion to enhance delivery and connection with the audience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

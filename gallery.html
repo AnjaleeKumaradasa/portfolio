@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Anjalee Kumaradasa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6d4c41;
+            --secondary: #d7ccc8;
+            --accent: #8d6e63;
+            --text: #3e2723;
+            --light: #f9f5f3;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        nav.main-nav {
+            background-color: var(--primary);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav.main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav.main-nav li {
+            margin: 0;
+        }
+
+        nav.main-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 14px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        nav.main-nav a:hover,
+        nav.main-nav a.active {
+            background-color: var(--accent);
+        }
+
+        .gallery-section {
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .gallery-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-section h2 {
+                font-size: 2rem;
+            }
+
+            .gallery-caption {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">My Skills</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Moments That Speak</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/ME1.jpeg" alt="Anjalee delivering a keynote">
+                    <div class="gallery-caption">UCN Newly appointed President</div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <img src="assets/cake.jpeg" alt="Anjalee showcasing her cooking skills">
+                    <div class="gallery-caption">Culinary Showcase</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/Announcing.jpeg" alt="Anjalee conducting a workshop">
+                    <div class="gallery-caption">Communication Workshop</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

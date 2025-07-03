@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anjalee Kumaradasa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6d4c41;
+      --secondary: #d7ccc8;
+      --accent: #8d6e63;
+      --text: #3e2723;
+      --light: #efebe9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: var(--light);
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('assets/bg1.jpg') no-repeat center center/cover;
+      filter: blur(3px) brightness(0.6);
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    nav.main-nav {
+      background-color: var(--secondary);
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav.main-nav ul {
+      list-style: none;
+    }
+
+    nav.main-nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav.main-nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    nav.main-nav a:hover {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Anjalee Kumaradasa</h1>
+    <p>Public Speaker | Announcer | Writer | Crafting Connections Through Powerful Communication</p>
+    <a href="about.html" class="btn">Discover My Journey</a>
+  </section>
+
+ 
+</body>
+</html>
